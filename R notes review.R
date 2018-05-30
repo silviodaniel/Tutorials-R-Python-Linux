@@ -317,4 +317,38 @@ df$color <-  rep(c("blue", "red", "yellow", "pink"), each=10)
 tail(df)
 View(df)
 
-#
+#Convert data frame to vector
+test <- data.frame(x=c(26,21,20),y=c(34,29,28))
+test
+test1=as.vector(t(test))#why the t() function? transpose ?
+
+test1[1]
+
+##REmove special characters
+x <- "a1~!@#$%^&*(){}_+:\"<>?,./;'[]-=" #or whatever
+gsub("[[:punct:]]", "", x)
+# str_replace_all(x, "[[:punct:]]", " ")
+
+######################################
+
+#Check if a character or phrase in a string
+chars <- "test"
+value <- "testing"
+grepl(value, chars)
+
+#Check if one of multiple separate strings in a vector
+mult_strings <- c("testing","just","because of")
+value <- "because"
+
+value %in% mult_strings 
+grepl(value,mult_strings[3])
+
+value %in% chars
+
+
+
+
+
+
+
+
