@@ -1,4 +1,5 @@
  #R Review notes
+#changes
 rm(list=ls())
 #For loop
 #Needto know: length of list, and which ith you are taking out from data
