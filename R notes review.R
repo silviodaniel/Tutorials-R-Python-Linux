@@ -1,4 +1,4 @@
-#R Review notes
+ #R Review notes
 rm(list=ls())
 #For loop
 #Needto know: length of list, and which ith you are taking out from data
@@ -344,6 +344,15 @@ value %in% mult_strings
 grepl(value,mult_strings[3])
 
 value %in% chars
+#########################################################################
+#using dplyr
+# > nrow(unique(select(rural, CVE_MUN, CVE_AGEB)))
+# [1] 346
+# > length(unique(select(rural, CVE_MUN, CVE_AGEB)))
+# [1] 3
+# > unique(select(rural, CVE_MUN, CVE_AGEB)) %>% nrow()
+# [1] 346
+# rural %>% select(CVE_MUN,CVE_AGEB) %>% unique
 
 
 
